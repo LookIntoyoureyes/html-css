@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-image: radial-gradient(circle at top center,#ccccca,#cccca1);
+}
+.contanier {
+  width:calc(100% - 300px);
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+}
+.item {
+  width: 60px;
+  height: 100%;
+  margin: 10px;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(.61, 0.49, .1, 0.85);
+}
+.item .content {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  height: 40px;
+  left: 10px;
+  right: 0;
+  bottom: 20px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(.61, 0.49, .1, 0.85);
+}
+.shlow {
+  width: calc(100% - 60px);
+  height: 40px;
+  background: rgba(0, 0, 0, .2);
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+}
+.cicle {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 16px;
+}
+.item:nth-child(1) .fa {
+  color: aqua;
+}
+.item:nth-child(2) .fa {
+  color: #ccc;
+}
+.item:nth-child(3) .fa {
+  color: #000;
+}
+.item:nth-child(4) .fa {
+  color: #b123;
+}
+.item:nth-child(5) .fa {
+  color: #e456;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  margin-left: 10px;
+  opacity: 0;
+}
+.text .con {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item.active {
+  flex: 1;
+}
+.item.active .text {
+  opacity: 1;
+}
